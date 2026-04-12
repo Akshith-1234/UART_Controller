@@ -15,14 +15,15 @@ begin
         tx <= 1'b1;
         index <= 3'b0;
     end
+    else begin
     case(state)
         idle_state: begin
+            tx <= 1'b1;
             if(wr_en)
             begin
                 state <= start_state;
                 index <= 3'b0;
                 data <= data_in;
-
             end
         end
         start_state: begin
@@ -46,6 +47,7 @@ begin
         end
         default : state <= idle_state;
     endcase
+    end
 end
 assign busy = (state != idle_state);
 endmodule
