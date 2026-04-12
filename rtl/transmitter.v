@@ -28,12 +28,16 @@ begin
         end
         start_state: begin
             tx <= 1'b0;
-            if(en)
+            if(en) begin
                 state <= data_state;
+                tx <= data[0];
+                index <= 3'b001;
+            end
+
         end
         data_state: begin
-            tx <= data[index];
             if(en) begin
+                tx <= data[index];
                 if(index == 3'h7)
                     state <= stop_state;
                 else
