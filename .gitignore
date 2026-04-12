@@ -1,0 +1,28 @@
+# --- Standard Verilog/Simulation Junk ---
+*.log
+*.vcd
+*.jou
+*.pb
+*.str
+
+# --- Vivado (Xilinx) Specific ---
+.Xil/
+vcc/
+*.jou
+*.log
+*.pb
+*.str
+*.dir/
+*.gen/
+*.ip_user_files/
+*.runs/
+*.srcs/utils_1/
+*.cache/
+*.hw/
+*.sim/
+*.ip/
+*.xpr
+*.bit
+*.bin
+*.mcs
+*.prm
